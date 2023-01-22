@@ -7,7 +7,7 @@ const Top = () => {
     const navigate = useNavigate();
 
     const moveAnswerView = () => {
-        navigate("/answer")
+        navigate("/Yoshizawa-Quest/answer")
     }
 
     return(

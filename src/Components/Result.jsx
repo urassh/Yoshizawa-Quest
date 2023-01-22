@@ -20,9 +20,9 @@ const Result = () =>{
         Quiz.correctCount = Number(location.state.correct);
         if(Quiz.MIN === QUESTIONS.length){
             Quiz.MIN = 0;
-            navigate("/final");
+            navigate("/Yoshizawa-Quest/final");
         } else {
-            navigate("/");
+            navigate("/Yoshizawa-Quest/");
         }
        
         
