@@ -21,9 +21,6 @@ const FinalView = () => {
                     テキストテキストテキストテキストテキストテキストテキストテキストテキスト
                 </p>
             </div>
-            <div className="emagency-mission">
-                教卓のベルを先に鳴らした<br/>上位3組には"+10ポイント"プレゼント!!
-            </div>
         </React.StrictMode>
         
     );

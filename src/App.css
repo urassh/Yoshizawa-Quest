@@ -83,14 +83,6 @@ button {
   margin-bottom: 10px;
 }
 
-.emagency-mission {
-  height: 50px;
-  width: 90%;
-  margin:0 auto;
-  font-size: 12px;
-  background-color: #ff4343;
-}
-
 #top-bg {
   background-image: url(./Images/yoshizawa_teacher.jpg);
   background-size: cover;
