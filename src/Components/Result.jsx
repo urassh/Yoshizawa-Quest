@@ -20,8 +20,10 @@ const Result = () =>{
         Quiz.correctCount = Number(location.state.correct);
         if(Quiz.MIN === QUESTIONS.length){
             Quiz.MIN = 0;
+            Quiz.stage = 0;
             navigate("/Yoshizawa-Quest/message");
         } else {
+            Quiz.stage += 1;
             navigate("/Yoshizawa-Quest/");
         }
        
@@ -41,10 +43,8 @@ const Result = () =>{
 
     const showFinalView = (isFinal) => {
         if (isFinal) {
-            Quiz.stage = 0;
             return <Button onClick={TransTop}>クイズを終わる。</Button>
         } else {
-            Quiz.stage += 1;
             return <Button onClick={TransTop}>クイズを続ける。</Button>
         }
     }
