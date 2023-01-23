@@ -72,15 +72,15 @@ button {
 
 /* Final View */
 
-.final-classLeader {
-  font-family: "Noto Serif JP";
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
 #top-bg {
   background-image: url(./Images/yoshizawa_teacher.jpg);
   background-size: cover;
+}
+
+.messages{
+  padding-right: 8px;
+  padding-left: 8px;
+  border-radius: 5px;
 }
 
 .message {
@@ -88,4 +88,18 @@ button {
   line-height: 26px;
   text-align: left;
   font-family: "Noto Serif JP";
+}
+
+.messages .title {
+  font-family: "Noto Serif JP";
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.messages.leader {
+  background-color: #8decff;
+}
+
+.messages.teacher {
+  background-color: #ffb464;
 }
