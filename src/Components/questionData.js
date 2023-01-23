@@ -4,6 +4,7 @@ class Quiz {
     static totalPoint = 0;
     static quizLength = 10;
     static MIN = 0;
+    static stage = 1;
     constructor(text, buttonsList, correct, point, level) {
         if(text === "") {
             console.log(`テキストが、空白の状態です。`);

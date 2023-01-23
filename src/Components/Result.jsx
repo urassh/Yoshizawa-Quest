@@ -41,8 +41,10 @@ const Result = () =>{
 
     const showFinalView = (isFinal) => {
         if (isFinal) {
+            Quiz.stage = 0;
             return <Button onClick={TransTop}>クイズを終わる。</Button>
         } else {
+            Quiz.stage += 1;
             return <Button onClick={TransTop}>クイズを続ける。</Button>
         }
     }

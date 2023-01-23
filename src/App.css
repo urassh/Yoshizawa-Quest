@@ -70,12 +70,15 @@ button {
   width: 200px;
 }
 
-/* Final View */
+/* Top */
 
 #top-bg {
   background-image: url(./Images/yoshizawa_teacher.jpg);
   background-size: cover;
+  height: 100%;
 }
+
+/* Message */
 
 .messages{
   padding-right: 8px;
