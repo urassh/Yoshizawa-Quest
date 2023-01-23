@@ -1,7 +1,7 @@
 import {Top} from './Components/Top';
 import { Answer } from './Components/Answer';
 import { Result } from './Components/Result';
-import { FinalView } from './Components/FinalView';
+import { Message } from './Components/Message';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styled from "styled-components";
 
@@ -13,7 +13,7 @@ const App = () => {
           <Route path={`${process.env.PUBLIC_URL}/`} element={<Top />} />
           <Route path={`${process.env.PUBLIC_URL}/answer`} element={<Answer />} />
           <Route path={`${process.env.PUBLIC_URL}/result`} element={<Result />} />
-          <Route path={`${process.env.PUBLIC_URL}/final`} element={<FinalView />} />
+          <Route path={`${process.env.PUBLIC_URL}/message`} element={<Message />} />
         </Routes>
       </QuizContainer>
     </BrowserRouter>
