@@ -72,18 +72,20 @@ button {
 
 /* Final View */
 
-.final-title {
-  font-family: "Noto Serif JP";
-  text-align: center;
-}
-
 .final-classLeader {
   font-family: "Noto Serif JP";
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
 #top-bg {
   background-image: url(./Images/yoshizawa_teacher.jpg);
   background-size: cover;
+}
+
+.message {
+  font-size: 16px;
+  line-height: 26px;
+  text-align: left;
+  font-family: "Noto Serif JP";
 }

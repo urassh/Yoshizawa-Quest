@@ -4,13 +4,12 @@ import React from 'react';
 const FinalView = () => {
     return(
         <React.StrictMode>
-            <h1 className="final-title">3年3組のみんな</h1>
+            
             <div className="messages">
                 <h3 className="final-classLeader">級長からのメッセージ</h3>
                 <p className='message'>
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    僕が初めて開発したアプリ<br />「Yoshizawa Quest」<br />で遊んでくれてありがとう!!<br />
+                    僕がクラスにいて、誰かは絶対何かヤバそうなことしてるヤツだな。と思っている人がいると思うのですが、これ作ってました!!笑 / 3-3は自発的に色々仕掛けられる人が沢山いて、本当にすごい。さらにこんな僕でも級長として認めてくれる居心地の良さは本当に最高のクラスだと思ってます。今まで2年間ありがとう。
                 </p>
             </div>
             <div className="messages">
