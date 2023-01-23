@@ -32,6 +32,7 @@ const Answer = ()=>{
         if (quiz.index === settingQuetions.length-1){
             Quiz.MIN = Quiz.index + Quiz.MIN;
             Quiz.index = 0;
+            Quiz.stage += 1;
             navigate('/Yoshizawa-Quest/result', {state: {correct: quiz.correctCount, point: quiz.totalPoint}});
         } else {
             setQuiz({...quiz, index: Quiz.index, isCorrect: false});
