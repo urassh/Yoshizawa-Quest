@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Yoshizawa-Quest/static/css/main.0cd718c1.css",
-    "main.js": "/Yoshizawa-Quest/static/js/main.f527b249.js",
+    "main.css": "/Yoshizawa-Quest/static/css/main.2d6bd60a.css",
+    "main.js": "/Yoshizawa-Quest/static/js/main.e4e7f9c9.js",
     "static/media/yoshizawa_teacher.jpg": "/Yoshizawa-Quest/static/media/yoshizawa_teacher.abcce3ed02d148143806.jpg",
     "static/media/correct.png": "/Yoshizawa-Quest/static/media/correct.49f8aba3b203f9b57a64.png",
     "static/media/incorrect.png": "/Yoshizawa-Quest/static/media/incorrect.fd07a070c14188b010c7.png",
     "index.html": "/Yoshizawa-Quest/index.html",
-    "main.0cd718c1.css.map": "/Yoshizawa-Quest/static/css/main.0cd718c1.css.map",
-    "main.f527b249.js.map": "/Yoshizawa-Quest/static/js/main.f527b249.js.map"
+    "main.2d6bd60a.css.map": "/Yoshizawa-Quest/static/css/main.2d6bd60a.css.map",
+    "main.e4e7f9c9.js.map": "/Yoshizawa-Quest/static/js/main.e4e7f9c9.js.map"
   },
   "entrypoints": [
-    "static/css/main.0cd718c1.css",
-    "static/js/main.f527b249.js"
+    "static/css/main.2d6bd60a.css",
+    "static/js/main.e4e7f9c9.js"
   ]
 }
