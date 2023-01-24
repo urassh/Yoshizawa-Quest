@@ -80,6 +80,7 @@ const Answer = ()=>{
                 </div>
             </Modal>
             <h1>第 {quiz.index+1} 問</h1>
+            <h3 id="level">レベル{settingQuetions[quiz.index].level}</h3>
             <p id="quiz-text">
                 {settingQuetions[quiz.index].text}
             </p>

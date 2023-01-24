@@ -19,6 +19,10 @@ button {
   font-family: "ヒラギノ丸ゴ ProN";
   margin: 8px 0;
 }
+#level {
+  text-align: left;
+  font-family: "ヒラギノ丸ゴ ProN";
+}
 .quiz-container #quiz-text {
   font-family: "ヒラギノ丸ゴ ProN";
   text-align: left;
