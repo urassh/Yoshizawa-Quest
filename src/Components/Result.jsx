@@ -19,7 +19,10 @@ const Result = () =>{
         console.log(`Question length : ${QUESTIONS.length}`);
         Quiz.correctCount = Number(location.state.correct);
         if(Quiz.MIN === QUESTIONS.length){
+            Quiz.stage = 1;
             Quiz.MIN = 0;
+            Quiz.totalPoint = 0;
+            Quiz.correctCount = 0;
             navigate("/Yoshizawa-Quest/message");
         } else {
             navigate("/Yoshizawa-Quest/");
