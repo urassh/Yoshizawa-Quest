@@ -27,8 +27,6 @@ const Result = () =>{
         } else {
             navigate("/Yoshizawa-Quest/");
         }
-       
-        
     }
 
     const showResult = () => {
@@ -53,11 +51,10 @@ const Result = () =>{
     return(
         <React.StrictMode>
             <TITLE>結果発表</TITLE>
-            <RESULT>{result}</RESULT>
-            <RESULT>{location.state.point}ポイント<ul /></RESULT>
+            <RESULT>{result}<br/>全{QUESTIONS.length}問中</RESULT>
+            <RESULT>{location.state.point}ポイント!!</RESULT>
             {showFinalView(isFinal)}
         </React.StrictMode>
-        
     );
 }
 
@@ -74,18 +71,18 @@ const RESULT = styled.h2`
     margin-top: 16px;
     magin-bottom: 64px;
     font-size: 40px;
+    border: 3px solid #ddd;
 `;
 
 const Button = styled.button`
     width: 100%;
     height: 48px;
-    margin-top: 150px;
+    margin-top: 100px;
     line-height: 48px;
     border-radius: 8px;
     color: white;
     background-color: #4366ff;
     font-family: "ヒラギノ丸ゴ ProN";
-    
 `;
 
 export {Result};
