@@ -81,10 +81,9 @@ const Answer = ()=>{
             </Modal>
             <h1>第 {quiz.index+1} 問</h1>
             <h3 id="level">レベル{settingQuetions[quiz.index].level}</h3>
-            <p id="quiz-text">
-                {/* {settingQuetions[quiz.index].text} */}
-                問題文はスクリーン(電子黒板)に表示されます。
-            </p>
+            {/* <p id="quiz-text">
+                {settingQuetions[quiz.index].text}
+            </p> */}
             <div className="answer-buttons">
                 <button id="1" className="answer-button button-1" onClick={quizHandler}>
                     {settingQuetions[quiz.index].buttonsList[0]}

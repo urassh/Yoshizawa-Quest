@@ -20,8 +20,11 @@ button {
   margin: 8px 0;
 }
 #level {
-  text-align: left;
+  text-align: center;
   font-family: "ヒラギノ丸ゴ ProN";
+
+  /* 土曜日用のCSS */
+  font-size: 28px;
 }
 .quiz-container #quiz-text {
   font-family: "ヒラギノ丸ゴ ProN";
