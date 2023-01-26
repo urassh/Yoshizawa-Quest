@@ -1,11 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styled from "styled-components";
 import { QUESTIONS, Quiz } from './questionData';
 
 const Result = () =>{
     const navigate = useNavigate();
-    const location = useLocation();
     const [result, setResult] = useState("");
     const [isFinal, setIsFinal] = useState(false);
 
@@ -14,7 +13,6 @@ const Result = () =>{
     });
     
     const TransTop = () => {
-        Quiz.correctCount = Number(location.state.correct);
         if(Quiz.index+1 >= QUESTIONS.length){
             Quiz.stage = 1;
             Quiz.totalPoint = 0;
@@ -29,10 +27,10 @@ const Result = () =>{
         if (Quiz.index+1 >= QUESTIONS.length) {
             setIsFinal(true);
         }
-        if(Number(location.state.correct) === QUESTIONS.length) {
+        if(Quiz.correctCount === QUESTIONS.length) {
             setResult("全問正解です。");
         } else {
-            setResult(`${location.state.correct}問正解!!`);
+            setResult(`${Quiz.correctCount}問正解!!`);
         }
     }
 
@@ -48,7 +46,7 @@ const Result = () =>{
         <React.StrictMode>
             <TITLE>結果発表</TITLE>
             <RESULT>{result}<br/>全{QUESTIONS.length}問中</RESULT>
-            <RESULT>{location.state.point}ポイント!!</RESULT>
+            <RESULT>{Quiz.totalPoint}ポイント!!</RESULT>
             {showFinalView(isFinal)}
         </React.StrictMode>
     );
