@@ -16,30 +16,17 @@ const Answer = ()=>{
 
     const quizHandler = (e)=> {
         const answered = e.currentTarget.id;
-        quizJudge(answered);
+        const result = quizInstance.quizJudge(answered);
+        setIsCorrect(result);
         setshowResultModal(true);
     }
 
-    const nextQuiz = () => {
-        setshowResultModal(false);
-        Quiz.index += 1;
-        if (Quiz.index % Quiz.quizLength === 0){
-            Quiz.stage += 1;
-            navigate('/Yoshizawa-Quest/result');
+    const quitModal = () => {
+        const isTransition = quizInstance.nextQuiz();
+        if(isTransition) {
+            navigate("/Yoshizawa-Quest/result");
         } else {
-            setIsCorrect(false);
-        }
-    }
-
-    const quizJudge = (answerButtonIndex) => {
-        const correct = quizInstance.correct;
-        const answer = Number(answerButtonIndex);
-        if(answer === correct) {
-            Quiz.correctCount+=1;
-            Quiz.totalPoint += quizInstance.point;
-            setIsCorrect(true);
-        } else {
-            setIsCorrect(false);
+            setshowResultModal(false);
         }
     }
 
@@ -51,22 +38,16 @@ const Answer = ()=>{
         }
     }
 
-    const showDetailAnswer = (isCorrect) => {
-        if(!(isCorrect)) {
-            return <h2>答えは{quizInstance.correct}番の<br/>「{quizInstance.buttonsList[quizInstance.correct-1]}」です。</h2>;
-        } 
-    }
-
     return(
         <div className="quiz-container">
             <Modal isOpen={showResultModal}>
                 <div id="result-form">
                     {showResultModalImage(isCorrect)}
-                    {showDetailAnswer(isCorrect)}
-                    <Button onClick={nextQuiz}>次へ</Button>
+                    <h2>答えは{quizInstance.correct}番の<br/>「{quizInstance.buttonsList[quizInstance.correct-1]}」でした。</h2>
+                    <Button onClick={quitModal}>次へ</Button>
                 </div>
             </Modal>
-            <h1>第 {Quiz.index % Quiz.quizLength+1} 問</h1>
+            <h1>第 {(Quiz.index % Quiz.quizLength)+1} 問</h1>
             <h3 id="level">レベル{quizInstance.level}</h3>
             {/* <p id="quiz-text">
                 {settingQuetions[quiz.index].text}

@@ -14,9 +14,7 @@ const Result = () =>{
 
     const TransTop = () => {
         if(Quiz.index+1 >= QUESTIONS.length){
-            Quiz.stage = 1;
-            Quiz.totalPoint = 0;
-            Quiz.correctCount = 0;
+            Quiz.initial();
             navigate("/Yoshizawa-Quest/message");
         } else {
             navigate("/Yoshizawa-Quest/");
