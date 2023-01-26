@@ -29,7 +29,7 @@ const Answer = ()=>{
     const nextQuiz = () => {
         setshowResultModal(false);
         Quiz.index += 1;
-        if (quiz.index === settingQuetions.length-1){
+        if (quiz.index === Quiz.quizLength-1){
             Quiz.MIN = Quiz.index + Quiz.MIN;
             Quiz.index = 0;
             Quiz.stage += 1;
