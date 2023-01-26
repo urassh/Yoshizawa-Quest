@@ -11,7 +11,7 @@ const Result = () =>{
     useEffect(()=>{
         showResult();
     });
-    
+
     const TransTop = () => {
         if(Quiz.index+1 >= QUESTIONS.length){
             Quiz.stage = 1;

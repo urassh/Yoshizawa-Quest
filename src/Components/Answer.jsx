@@ -10,9 +10,7 @@ import incorrectImage from "../Images/incorrect.png"
 
 const Answer = ()=>{
     const quizInstance = QUESTIONS[Quiz.index];
-
     const navigate = useNavigate();
-
     const [isCorrect, setIsCorrect] = useState(false);
     const [showResultModal, setshowResultModal] = useState(false);
 
@@ -85,7 +83,7 @@ const Answer = ()=>{
                 </button>
                 <button id="4" className="answer-button button-4" onClick={quizHandler}>
                     {quizInstance.buttonsList[3]}
-                </button> 
+                </button>
             </div>
         </div>
     );
