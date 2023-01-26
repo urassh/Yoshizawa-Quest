@@ -9,8 +9,8 @@ import correctImage from "../Images/correct.png";
 import incorrectImage from "../Images/incorrect.png"
 
 const Answer = ()=>{
-    const Max = Quiz.MIN + Quiz.quizLength;
-    const settingQuetions = QUESTIONS.slice(Quiz.MIN, Max);
+    const test_quiz_instance = QUESTIONS[Quiz.index];
+
     const navigate = useNavigate();
     const [quiz, setQuiz] = useState({
         index: Quiz.index,
@@ -22,6 +22,7 @@ const Answer = ()=>{
 
     const quizHandler = (e)=> {
         const answered = e.currentTarget.id;
+        console.log(`呼ばれたQuizインスタンス : ${test_quiz_instance.text}`);
         quizJudge(answered);
         setshowResultModal(true);
     }
@@ -29,9 +30,7 @@ const Answer = ()=>{
     const nextQuiz = () => {
         setshowResultModal(false);
         Quiz.index += 1;
-        if (quiz.index === Quiz.quizLength-1){
-            Quiz.MIN = Quiz.index + Quiz.MIN;
-            Quiz.index = 0;
+        if ((quiz.index+1) % Quiz.quizLength === 0){
             Quiz.stage += 1;
             navigate('/Yoshizawa-Quest/result', {state: {correct: quiz.correctCount, point: quiz.totalPoint}});
         } else {
@@ -40,11 +39,11 @@ const Answer = ()=>{
     }
 
     const quizJudge = (answerButtonIndex) => {
-        const correct = settingQuetions[quiz.index].correct;
+        const correct = test_quiz_instance.correct;
         const answer = Number(answerButtonIndex);
         if(answer === correct) {
             Quiz.correctCount+=1;
-            Quiz.totalPoint += settingQuetions[quiz.index].point;
+            Quiz.totalPoint += test_quiz_instance.point;
             setQuiz({...quiz,
                 isCorrect: true,
                 correctCount: Quiz.correctCount,
@@ -56,7 +55,6 @@ const Answer = ()=>{
     }
 
     const showResultModalImage = (isCorrect) => {
-        console.log(QUESTIONS[quiz.index].text);
         if(isCorrect) {
             return <img src={correctImage} alt="incrrectImage" />;
         } else {
@@ -66,7 +64,7 @@ const Answer = ()=>{
 
     const showDetailAnswer = (isCorrect) => {
         if(!(isCorrect)) {
-            return <h2>答えは{settingQuetions[quiz.index].correct}番の<br/>「{settingQuetions[quiz.index].buttonsList[settingQuetions[quiz.index].correct-1]}」です。</h2>;
+            return <h2>答えは{test_quiz_instance.correct}番の<br/>「{test_quiz_instance.buttonsList[test_quiz_instance.correct-1]}」です。</h2>;
         } 
     }
 
@@ -79,23 +77,23 @@ const Answer = ()=>{
                     <Button onClick={nextQuiz}>次へ</Button>
                 </div>
             </Modal>
-            <h1>第 {quiz.index+1} 問</h1>
-            <h3 id="level">レベル{settingQuetions[quiz.index].level}</h3>
+            <h1>第 {quiz.index % Quiz.quizLength+1} 問</h1>
+            <h3 id="level">レベル{test_quiz_instance.level}</h3>
             {/* <p id="quiz-text">
                 {settingQuetions[quiz.index].text}
             </p> */}
             <div className="answer-buttons">
                 <button id="1" className="answer-button button-1" onClick={quizHandler}>
-                    {settingQuetions[quiz.index].buttonsList[0]}
+                    {test_quiz_instance.buttonsList[0]}
                 </button>
                 <button id="2" className="answer-button button-2" onClick={quizHandler}>
-                    {settingQuetions[quiz.index].buttonsList[1]}
+                    {test_quiz_instance.buttonsList[1]}
                 </button>
                 <button id="3" className="answer-button button-3" onClick={quizHandler}>
-                    {settingQuetions[quiz.index].buttonsList[2]}
+                    {test_quiz_instance.buttonsList[2]}
                 </button>
                 <button id="4" className="answer-button button-4" onClick={quizHandler}>
-                    {settingQuetions[quiz.index].buttonsList[3]}
+                    {test_quiz_instance.buttonsList[3]}
                 </button> 
             </div>
         </div>

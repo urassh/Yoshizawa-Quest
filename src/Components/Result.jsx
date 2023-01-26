@@ -14,13 +14,9 @@ const Result = () =>{
     });
     
     const TransTop = () => {
-        console.log(`Quiz index : ${Quiz.index}`);
-        console.log(`Quiz MIN : ${Quiz.MIN}`);
-        console.log(`Question length : ${QUESTIONS.length}`);
         Quiz.correctCount = Number(location.state.correct);
-        if(Quiz.MIN === QUESTIONS.length){
+        if(Quiz.index+1 >= QUESTIONS.length){
             Quiz.stage = 1;
-            Quiz.MIN = 0;
             Quiz.totalPoint = 0;
             Quiz.correctCount = 0;
             navigate("/Yoshizawa-Quest/message");
@@ -30,7 +26,7 @@ const Result = () =>{
     }
 
     const showResult = () => {
-        if (Quiz.MIN === QUESTIONS.length) {
+        if (Quiz.index+1 >= QUESTIONS.length) {
             setIsFinal(true);
         }
         if(Number(location.state.correct) === QUESTIONS.length) {

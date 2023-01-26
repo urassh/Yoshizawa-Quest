@@ -3,7 +3,6 @@ class Quiz {
     static correctCount = 0;
     static totalPoint = 0;
     static quizLength = 10;
-    static MIN = 0;
     static stage = 1;
     constructor(text, buttonsList, correct, point, level) {
         if(text === "") {
