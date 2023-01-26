@@ -11,14 +11,6 @@ class Quiz {
         Quiz.correctCount = 0;
     }
     constructor(text, buttonsList, correct, point, level) {
-        if(text === "") {
-            console.log(`テキストが、空白の状態です。`);
-        } else if (correct > 4) {
-            console.log(`correctの値が不正です。`);
-        }
-        if (level >= 4 || level < 0){
-            console.log("Levelの値が不正です。");
-        }
         this.text = text;
         this.buttonsList = buttonsList;
         this.correct = correct;
