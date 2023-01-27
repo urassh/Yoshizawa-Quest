@@ -15,6 +15,19 @@ button {
   all: unset;
 }
 
+/* Top */
+#top-bg {
+  background-image: url(./Images/teacher.png);
+  background-size: cover;
+  height: 100%;
+  padding: 16px;
+}
+
+/* Answer.jsx */
+.quiz-container {
+  padding: 16px;
+}
+
 .quiz-container h1 {
   font-family: "ヒラギノ丸ゴ ProN";
   margin: 8px 0;
@@ -75,14 +88,6 @@ button {
   margin-top: 50px;
   margin-bottom: 50px;
   width: 200px;
-}
-
-/* Top */
-
-#top-bg {
-  background-image: url(./Images/yoshizawa_teacher.jpg);
-  background-size: cover;
-  height: 100%;
 }
 
 /* Message */

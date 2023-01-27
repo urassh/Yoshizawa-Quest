@@ -43,13 +43,19 @@ const Result = () =>{
     
     return(
         <React.StrictMode>
-            <TITLE>結果発表</TITLE>
-            <RESULT>{result}<br/>全{QUESTIONS.length}問中</RESULT>
-            <RESULT>{Quiz.totalPoint}ポイント!!</RESULT>
-            {showFinalView(isFinal)}
+            <CONTAINER>
+                <TITLE>結果発表</TITLE>
+                <RESULT>{result}<br/>全{QUESTIONS.length}問中</RESULT>
+                <RESULT>{Quiz.totalPoint}ポイント!!</RESULT>
+                {showFinalView(isFinal)}
+            </CONTAINER>
         </React.StrictMode>
     );
 }
+
+const CONTAINER = styled.div`
+    padding: 16px;
+`;
 
 const TITLE = styled.h1`
     font-family: "ヒラギノ丸ゴ ProN";
