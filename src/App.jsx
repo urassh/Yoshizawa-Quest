@@ -11,10 +11,9 @@ const App = () => {
       <QuizContainer>
         <Routes>
           <Route path={`${process.env.PUBLIC_URL}/`} element={<Top />} />
-          <Route path={`${process.env.PUBLIC_URL}/Yoshizawa-Quest/`} element={<Top />} />
-          <Route path={`${process.env.PUBLIC_URL}/Yoshizawa-Quest/answer`} element={<Answer />} />
-          <Route path={`${process.env.PUBLIC_URL}/Yoshizawa-Quest/result`} element={<Result />} />
-          <Route path={`${process.env.PUBLIC_URL}/Yoshizawa-Quest/message`} element={<Message />} />
+          <Route path={`${process.env.PUBLIC_URL}/answer`} element={<Answer />} />
+          <Route path={`${process.env.PUBLIC_URL}/result`} element={<Result />} />
+          <Route path={`${process.env.PUBLIC_URL}/message`} element={<Message />} />
         </Routes>
       </QuizContainer>
     </BrowserRouter>
