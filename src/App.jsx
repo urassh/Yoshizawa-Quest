@@ -28,6 +28,5 @@ const QuizContainer = styled.div`
   height: 600px;
   background-color: white;
   text-align: center;
-  padding: 16px;
 `;
 export default App;
