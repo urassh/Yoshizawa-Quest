@@ -4,8 +4,8 @@ import Modal from "react-modal";
 import styled from "styled-components";
 
 import '../App.css';
-import { QUESTIONS } from '../questionData';
-import {Quiz} from '../Quiz';
+import { QUESTIONS } from '../Quiz/questionData';
+import {Quiz} from '../Quiz/Quiz';
 import correctImage from "../Images/correct.png";
 import incorrectImage from "../Images/incorrect.png"
 
