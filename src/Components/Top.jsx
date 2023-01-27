@@ -1,5 +1,5 @@
 import React from 'react';
-import { Quiz } from './questionData';
+import { Quiz } from '../Quiz';
 import { useNavigate } from 'react-router-dom';
 import styled from "styled-components";
 import '../App.css';

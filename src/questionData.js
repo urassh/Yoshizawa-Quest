@@ -1,45 +1,4 @@
-class Quiz {
-    static index = 0;
-    static correctCount = 0;
-    static totalPoint = 0;
-    static quizLength = 10;
-    static stage = 1;
-    static initial = () => {
-        Quiz.index = 0;
-        Quiz.stage = 1;
-        Quiz.totalPoint = 0;
-        Quiz.correctCount = 0;
-    }
-    constructor(text, buttonsList, correct, point, level) {
-        this.text = text;
-        this.buttonsList = buttonsList;
-        this.correct = correct;
-        this.point = point;
-        this.level = level;
-        Object.freeze(this);
-    }
-
-    quizJudge = (answerButtonIndex) => {
-        const answer = Number(answerButtonIndex);
-        if(answer === this.correct) {
-            Quiz.correctCount+=1;
-            Quiz.totalPoint += this.point;
-            return true;
-        } else {
-            return false;
-        }
-    }
-    
-    nextQuiz = () => {
-        Quiz.index += 1;
-        if (Quiz.index % Quiz.quizLength === 0){
-            Quiz.stage += 1;
-            return true;
-        } else {
-            return false;
-        }
-    }
- }
+import {Quiz} from './Quiz';
 
 const QUESTIONS = [
     new Quiz("体育活動中の死亡事故で一番多い原因は？", ["心臓発作", "頭部をぶつける", "エレベータで押し合う", "こける"], 1, 2, 2),
@@ -98,4 +57,4 @@ const QUESTIONS = [
     new Quiz("吉澤先生が、2年間このクラスで過ごした 一番 の思い出はなんでしょう？", ["２年生の大掃除でみんながやれることを探してやっていたこと", "試験のたびに学年１位の成績を取っていたこと", "定期的にスマホを没収してほしい人が登場したこと", "体育祭で２年連続優勝したこと"], 1, 3, 3),
 ];
 
-export {QUESTIONS, Quiz};
+export {QUESTIONS};
