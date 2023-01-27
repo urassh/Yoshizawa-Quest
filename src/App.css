@@ -72,6 +72,7 @@ button {
   background-color: #ffae2b;
 }
 
+/* Answer.jsx内のModal */
 #result-form {
   width: 330px;
   height: 600px;
@@ -81,11 +82,11 @@ button {
 }
 
 #result-form h2 {
-  font-family: "Noto Serif JP";
-  
+  font-family: "Noto Serif JP";  
 }
+
 #result-form img {
-  margin-top: 50px;
+  margin-top: 0px;
   margin-bottom: 50px;
   width: 200px;
 }
