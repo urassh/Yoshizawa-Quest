@@ -50,9 +50,9 @@ const Answer = ()=>{
             </Modal>
             <h1>第 {(Quiz.index % Quiz.quizLength)+1} 問</h1>
             <h3 id="level">レベル{quizInstance.level}</h3>
-            {/* <p id="quiz-text">
-                {settingQuetions[quiz.index].text}
-            </p> */}
+            <p id="quiz-text">
+                {quizInstance.text}
+            </p>
             <div className="answer-buttons">
                 <button id="1" className="answer-button button-1" onClick={quizHandler}>
                     {quizInstance.buttonsList[0]}
