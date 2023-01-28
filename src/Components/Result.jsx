@@ -15,7 +15,6 @@ const Result = () =>{
 
     const TransTop = () => {
         if(Quiz.index+1 >= QUESTIONS.length){
-            Quiz.initial();
             navigate("/Yoshizawa-Quest/message");
         } else {
             navigate("/Yoshizawa-Quest/");
@@ -35,6 +34,7 @@ const Result = () =>{
 
     const showFinalView = (isFinal) => {
         if (isFinal) {
+            Quiz.initial();
             return <Button onClick={TransTop}>クイズを終わる。</Button>
         } else {
             return <Button onClick={TransTop}>クイズを続ける。</Button>
