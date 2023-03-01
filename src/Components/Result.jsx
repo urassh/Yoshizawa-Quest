@@ -14,11 +14,13 @@ const Result = () =>{
     });
 
     const TransTop = () => {
-        if(Quiz.index+1 >= QUESTIONS.length){
-            navigate("/Yoshizawa-Quest/message");
-        } else {
-            navigate("/Yoshizawa-Quest/");
-        }
+        //メッセージViewはつけない。
+        // if(Quiz.index+1 >= QUESTIONS.length){
+        //     navigate("/Yoshizawa-Quest/message");
+        // } else {
+        //     navigate("/Yoshizawa-Quest/");
+        // }
+        navigate("/Yoshizawa-Quest/");
     }
 
     const showResult = () => {
