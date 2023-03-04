@@ -63,9 +63,6 @@ const Answer = ()=>{
                 <button id="3" className="answer-button button-3" onClick={quizHandler}>
                     {quizInstance.buttonsList[2]}
                 </button>
-                <button id="4" className="answer-button button-4" onClick={quizHandler}>
-                    {quizInstance.buttonsList[3]}
-                </button>
             </div>
         </div>
     );

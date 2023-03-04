@@ -2,7 +2,7 @@ class Quiz {
     static index = 0;
     static correctCount = 0;
     static totalPoint = 0;
-    static quizLength = 10;
+    static quizLength = 5;
     static stage = 1;
     static initial = () => {
         Quiz.index = 0;
