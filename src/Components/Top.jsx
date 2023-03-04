@@ -23,8 +23,8 @@ const Top = () => {
 
 const STAGE = styled.div`
     font-family: "Noto Serif JP";
-    margin-top: 200px;
-    margin-bottom: 150px;
+    margin-top: 300px;
+    margin-bottom: 80px;
     text-align: center;
     font-size: 40px;
     color: white;
