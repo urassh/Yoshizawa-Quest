@@ -14,13 +14,12 @@ const Result = () =>{
     });
 
     const TransTop = () => {
-        //メッセージViewはつけない。
-        // if(Quiz.index+1 >= QUESTIONS.length){
-        //     navigate("/Yoshizawa-Quest/message");
-        // } else {
-        //     navigate("/Yoshizawa-Quest/");
-        // }
-        navigate("/Yoshizawa-Quest/");
+        if(Quiz.index+1 >= QUESTIONS.length){
+            Quiz.initial();
+            navigate("/Yoshizawa-Quest/");
+        } else {
+            navigate("/Yoshizawa-Quest/");
+        }
     }
 
     const showResult = () => {
@@ -36,7 +35,6 @@ const Result = () =>{
 
     const showFinalView = (isFinal) => {
         if (isFinal) {
-            Quiz.initial();
             return <Button onClick={TransTop}>クイズを終わる。</Button>
         } else {
             return <Button onClick={TransTop}>クイズを続ける。</Button>
